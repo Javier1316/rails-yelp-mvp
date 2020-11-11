@@ -1,12 +1,15 @@
-
 <div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
   <h1>Restaurant:</h1>
-  <% @restaurants.each do |restaurant| %>
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-    <h3><%= restaurant.name %></h3>
-    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
-    </div> 
-  <% end %>
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>    
+      <div class="col-xs-12 col-sm-4">
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+        <h3><%= restaurant.name %></h3>
+        <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+        </div> 
+      </div>    
+    <% end %>
+  </div>
 </div>
   
   
