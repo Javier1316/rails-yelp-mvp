@@ -1,16 +1,16 @@
 
-<div class="container">
+<div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-      <h1><%= @restaurant.name %></h1>
+    <h1><%= @restaurant.name %></h1>
     <hr>
-    <p> Address: <%= @restaurant.address %> </p>
+    <p><strong>Address:</strong> <%= @restaurant.address %> </p>
     <hr>
-    <p> Phone: <%= @restaurant.phone_number %> </p>
+    <p> <strong>Phone:</strong> <%= @restaurant.phone_number %> </p>
     <hr>
-    <p> Category: <%= @restaurant.category %> </p>
+    <p> <strong>Category:</strong> <%= @restaurant.category %> </p>
     <hr>
-    <h4>Reviews: </h4>
+    <p><strong>Reviews:</strong></p>
     <% @reviews.each do |review| %>
       <li> "<%= review.content %>" | <%= review.rating %></li>
     <% end %>

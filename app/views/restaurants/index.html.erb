@@ -1,20 +1,12 @@
 
-<div class="container">
-<h1>This are all the restaurants:</h1>
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div class="restlist">
-          <% @restaurants.each do |restaurant| %>
-            <div class="col-xs-12 col-sm-4">
-              <div class="card">
-                <div class="card-description">
-                  <%= restaurant.name %>
-                    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
-                </div>          
-              </div>
-            </div>
-          <% end %>
-      </div>
-    </div>
-  </div>
+<div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
+  <h1>Restaurant:</h1>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+    <h3><%= restaurant.name %></h3>
+    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+    </div> 
+  <% end %>
 </div>
+  
+  
